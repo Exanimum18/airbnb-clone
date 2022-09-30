@@ -6,7 +6,7 @@ class PlansController < ApplicationController
   end
 
   def show
-    @plans = Plan.all
+    set_plan
   end
 
   def new
@@ -24,12 +24,20 @@ class PlansController < ApplicationController
   end
 
   def edit
+    set_plan
   end
 
   def update
+    set_plan
+    if @plan.update(plan_params)
+      redirect_to plan_path(@plan)
+    else
+      render :edit, status: :unprocessable_entity
+    end
   end
 
   def destroy
+    set_plan
     @plan.destroy
     redirect_to plans_path, status: :see_other
   end
