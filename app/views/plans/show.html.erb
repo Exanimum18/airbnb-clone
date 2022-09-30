@@ -1,2 +1,33 @@
-<h1>Plans#show</h1>
-<p>Find me in app/views/plans/show.html.erb</p>
+<div class="container m-5">
+  <div class="row  justify-content-center">
+    <div class="col-12 col-lg-6">
+      <div class="d-block text-primary display-4">
+        <%= "Name:" %> <%=  @plan.name %>
+      </div>
+      <br>
+      <div class="d-block fs-3">
+        <%= "Description:" %> <%= @plan.description %>
+      </div>
+      <div class="d-block fs-3">
+        <%= "Location:" %> <%= @plan.location %>
+      </div>
+      <div class="d-block fs-3">
+        <%= "Category:" %> <%= @plan.category %>
+      </div>
+      <div class="d-block fs-3">
+        <%= "Intensity:" %> <%= @plan.intensity %>
+      </div>
+      <div class="d-block fs-3">
+        <%= "Starts:" %> <%= @plan.starting_time %>
+      </div>
+      <div class="d-block fs-3">
+        <%= "Ends:" %> <%= @plan.finish_time %>
+      </div>
+      <br>
+      <div class="d-flex align-items-center justify-content-between mb-3">
+        <%= button_to "Delete plan", plan_path(@plan), data: { confirm: "Are you sure?" }, method: :delete, class: "btn btn-primary" %>
+        <%= link_to "Edit", edit_plan_path(@plan), class: "btn btn-primary" %>
+      </div>
+    </div>
+  </div>
+</div>
