@@ -1,2 +1,19 @@
-<h1>Plans#new</h1>
-<p>Find me in app/views/plans/new.html.erb</p>
+<div class="container py-5">
+  <div class="row">
+    <div class="col-12 col-md-6 offset-lg-3">
+      <div class="bg-white rounded p-3 shadow">
+        <h3>Create a new plan</h3>
+        <%= simple_form_for @plan do |f| %>
+          <%= f.input :name, placeholder: 'Senderismo' %>
+          <%= f.input :description%>
+          <%= f.input :location%>
+          <%= f.input :category%>
+          <%= f.input :intensity%>
+          <%= f.input :starting_time%>
+          <%= f.input :finish_time%>
+          <%= f.submit class: 'btn btn-danger' %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
