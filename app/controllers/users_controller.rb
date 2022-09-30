@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :edit, :update]
+  before_action :set_user, only: [:show, :edit, :update, :delete]
   def create
   end
 
@@ -11,8 +11,9 @@ class UsersController < ApplicationController
     @user.update user_params
   end
 
-
-  def delete
+  def destroy
+    @user.delete
+    redirect_to pages_home_path
   end
 
   def show
