@@ -13,7 +13,6 @@ class UsersController < ApplicationController
 
   def destroy
     @user.delete
-    redirect_to pages_home_path
   end
 
   def show
