@@ -1,16 +1,31 @@
 class UsersController < ApplicationController
-  def new
-  end
-
+  before_action :set_user, only: [:show, :edit, :update]
   def create
   end
 
   def edit
+    #@user = User.find(params[:id])
   end
 
   def update
+    @user.update user_params
   end
 
-  def destroy
+
+  def delete
+  end
+
+  def show
+    #@user = User.find(params[:id])
+  end
+
+  private
+
+  def set_user
+    @user = User.find(params[:id])
+  end
+
+  def user_params
+    params.require(:user).permit(:first_name, :last_name, :email, :guide)
   end
 end

@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  post 'users/create' # como linkear este get a users/sign_up?
+  get 'users/:id/edit', to: "users#edit", as: "edit_user"
+  get 'users/delete'
+  get 'users/:id', to: "users#show", as: "show_user"
+  patch 'users/:id/', to: "users#update", as: "user"
   resources :user
     resources :plan
 
