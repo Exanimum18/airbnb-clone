@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
   root to: "plans#index"
+  
+  resources :plans do
+    resources :bookings
+  end
+
 
   resources :plans do
     resources :bookings
