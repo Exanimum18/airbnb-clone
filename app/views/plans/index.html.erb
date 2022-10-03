@@ -1,14 +1,18 @@
 <div class="container py-5">
-  <div class="d-flex align-items-center justify-content-between mb-3">
+  <div class="d-flex align-items-center justify-content-between mb-3 cover">
     <h3 class="mb-0 ">Plans list</h3>
     <%= link_to "Create a plan", new_plan_path, class: "btn btn-primary" %>
   </div>
   <div class="row">
     <% @plans.each do |plan| %>
-      <div class="co-12 col-sm-6 col-md-4 mb-3 border m-1 text-center">
-        <%= link_to plan_path(plan), class:"text-decoration-none" do %>
+      <div class="co-12 col-sm-6 col-md-4 mb-3 text-center">
+          <%= link_to plan_path(plan), class:"text-decoration-none" do %>
           <%= plan.name %>
-          <%= link_to "Booking", class: "btn btn-primary" %>
+        <div class= "img-plans">
+        </div>
+        <div class= "btn btn-primary">
+          <%= link_to "Booking"%>
+        </div>
         <% end %>
       </div>
     <% end %>
