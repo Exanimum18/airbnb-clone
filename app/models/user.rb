@@ -14,7 +14,6 @@
 #  last_name              :string
 #  guide                  :boolean
 #
-# guide es el tipo de usuario, si es true es guia, si es false es turista
 class User < ApplicationRecord
   has_many :plans
   has_many :bookings
