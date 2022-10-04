@@ -27,7 +27,7 @@
       <div class="d-flex align-items-center justify-content-between mb-3">
         <%= button_to "Delete plan", plan_path(@plan), data: { confirm: "Are you sure?" }, method: :delete, class: "btn btn-primary" %>
         <%= link_to "Edit", edit_plan_path(@plan), class: "btn btn-primary" %>
-        <%= link_to "Booking", edit_plan_path(@plan), class: "btn btn-primary" %>
+        <%= link_to "Booking", new_plan_booking_path(@plan), class: "btn btn-primary" %>
       </div>
     </div>
   </div>
