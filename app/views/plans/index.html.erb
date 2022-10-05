@@ -1,3 +1,4 @@
+
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -14,6 +15,16 @@
     <div class="text-box">
       <h1>NO SÉ QUE VENDEMOS</h1>
     </div>
+
+<div class="container py-5">
+  <div class="d-flex align-items-center justify-content-between mb-3 cover">
+    <h3 class="mb-0 ">Plans list</h3>
+    <% if current_user.present? %>
+      <% if current_user.guide == true %>
+        <%= link_to "Create a plan", new_plan_path, class: "btn btn-primary" %>
+      <% end %>
+    <% end %>
+
   </div>
 
 
@@ -34,8 +45,14 @@
           </div>
           <% end %>
         </div>
+
       <% end %>
     </div>
+
+        <% end %>
+      </div>
+    <% end %>
+
   </div>
 </body>
 </html>
