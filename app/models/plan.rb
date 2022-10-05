@@ -16,6 +16,7 @@
 #
 class Plan < ApplicationRecord
   belongs_to :user
+  has_many :bookings, dependent: :destroy
 
   include PgSearch::Model
 
