@@ -1,7 +1,11 @@
 <div class="container py-5">
   <div class="d-flex align-items-center justify-content-between mb-3 cover">
     <h3 class="mb-0 ">Plans list</h3>
-    <%= link_to "Create a plan", new_plan_path, class: "btn btn-primary" %>
+    <% if current_user.present? %>
+      <% if current_user.guide == true %>
+        <%= link_to "Create a plan", new_plan_path, class: "btn btn-primary" %>
+      <% end %>
+    <% end %>
   </div>
   <div class="row">
     <% @plans.each do |plan| %>
