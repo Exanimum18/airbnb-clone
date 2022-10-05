@@ -1,3 +1,5 @@
-<%= @bookings.each do |booking| %>
-  <%= booking.plan %>
+<% @bookings.each do |booking| %>
+  <p><%= booking.plan.name %></p>
+  <p><%= booking.plan.description %></p>
+  <p><%= booking.status ? 'activo' : 'cancelado'%></p>
 <% end %>

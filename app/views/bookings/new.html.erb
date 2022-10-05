@@ -27,11 +27,12 @@
               <div class="d-block fs-3">
                 <strong> <%= "Ends:" %> </strong> <%= @plan.finish_time %>
               </div>
-              <%= simple_form_for @plan do |f| %>
-              <%= f.input :status,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "guide" }%>
+              <%= simple_form_for [@plan, @booking] do |f| %>
+                <%= f.input :status,
+                  required: true,
+                  autofocus: true,
+                  input_html: { autocomplete: "Comfirm" }%>
+                <%= f.submit class: 'btn btn-primary'%>
               <% end %>
             </div>
           </div>
