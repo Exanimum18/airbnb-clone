@@ -1,4 +1,4 @@
-<% @bookings.each do |booking| %>
+<% Booking.where(user: current_user).each do |booking| %>
     <p><%= booking.plan.name %></p>
     <p><%= booking.plan.description %></p>
     <p><%= booking.plan.location %></p>
