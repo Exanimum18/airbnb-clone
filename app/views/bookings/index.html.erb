@@ -3,4 +3,5 @@
     <p><%= booking.plan.description %></p>
     <p><%= booking.plan.location %></p>
     <p><%= booking.status ? 'activo' : 'cancelado'%></p>
+    <%= button_to "Delete Booking", plan_bookings_path(booking), data: { confirm: "Are you sure?" }, method: :delete, class: "btn btn-primary m-1" %>
 <% end %>
