@@ -5,18 +5,18 @@
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   }
 
-  .container{
-      width: 100%;
-      height: 100vh;
-      position: relative;
-  }
+  // .container{
+  //     width: 100%;
+  //     height: 100vh;
+  //     position: relative;
+  // }
 
-  .container video{
-      width: 100%;
-      height: 100%;
-  }
+  // .container footer{
+  //     width: 100%;
+  //     height: 10%;
+  // }
 
-  .text-box{
+.text-box{
       position: absolute;
       top: 0;
       left: 0;
@@ -31,4 +31,4 @@
       font-weight: 300px;
       mix-blend-mode: multiply;
 
-  }
+}
