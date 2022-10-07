@@ -1,4 +1,5 @@
 
+
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -30,3 +31,44 @@
   </div>
 </body>
 </html>
+
+    <div class=" mb-5 mt-5 ">
+      <h1 class="text center"> Pa donde pegamos?
+      </h1>
+    </div>
+
+
+    <div class="container mx-auto">
+      <div class="d-flex align-items-center justify-content-between mb-3 cover">
+        <div class="position-absolute top-50 start-50 translate-middle">
+        <%= link_to "Publica tu parche", new_plan_path, class: "btn btn-outline-light btn-lg" %>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+      <% @plans.each do |plan| %>
+        <div class="col-lg-4">
+          <div class="card h-100 d-flex justify-content-between" style="width: 21rem ">
+                <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Vista_de_la_Iglesia_del_Perpetuo_Socorro_al_centro_-_Medell%C3%ADn.JPG/275px-Vista_de_la_Iglesia_del_Perpetuo_Socorro_al_centro_-_Medell%C3%ADn.JPG" alt="Card image cap">
+                  <div class="card-body">
+                  <h5 class="card-title"><%= plan.name %></h5>
+                  <p class="card-text"> <%= plan.description %></p>
+                  <center>
+                  <div class= "btn btn-primary mx-auto text-center text-decoration-none">
+                    <%= link_to "Armemos parche", plan_path(plan), class:"text-decoration-none"%>
+                  </div>
+                  </center>
+
+
+
+                  </div>
+              </div>
+        </div>
+      <% end %>
+      </div>
+    </div>
+
+

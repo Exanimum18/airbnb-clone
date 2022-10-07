@@ -25,7 +25,7 @@
           <strong> <%= "Ends:" %> </strong> <%= @plan.finish_time %>
         </div>
         <br>
-        <div class="d-flex">
+        <div class="d-flex ">
           <% if current_user.present? %>
             <% if current_user.id == @plan.user_id %>
               <%= button_to "Delete plan", plan_path(@plan), data: { confirm: "Are you sure?" }, method: :delete, class: "btn btn-primary m-1" %>
