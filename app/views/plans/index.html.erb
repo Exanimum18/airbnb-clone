@@ -23,28 +23,42 @@
       </div>
     </div>
 
-    <div class="row">
-      <% @plans.each do |plan| %>
-        <div class="co-12 col-sm-6 col-md-4 mb-3 text-center">
-            <%= link_to plan_path(plan), class:"text-decoration-none" do %>
-            <%= plan.name %>
-          <div class= "img-plans">
+  <div class="card-group">
+      <div class="container display:inline-elements">
+          <div class="row">
+            <% @plans.each do |plan| %>
+              <div class="col-12 col-sm-6 col-md-4 mb-3 text-center">
+                <%= link_to plan_path(plan), class:"text-decoration-none" do %>
+                <div class="card h-100 d-flex justify-content-between" style="width: 18rem;">
+                  <div class= "img-plans card-img-top">
+                    <img  src="https://idiomasblendex.com/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2018/11/Cero-las-tres-cruces-ingles-en-medellin-768x433.jpg.webp" alt="Card image cap">
+                  </div>
+                  <div class="card-body">
+                  <h5> <%= plan.name class:"card-title"%> </h5>
+                  <%= plan.description class:"card-text"%>
+                    <div class= "btn btn-primary mx-auto text-center">
+                    <%= link_to "Armemos parche"%>
+                    </div>
+
+                  </div>
+                <% end %>
+            <% end %>
           </div>
-          <div class= "btn btn-primary">
-            <%= link_to "Booking"%>
+
           </div>
-          <% end %>
-        <% end %>
         </div>
+      </div>
     </div>
+
+
 
 
     <div class="card-group">
       <div class="container display:inline-elements">
         <div class="row">
           <div class="col-md-4">
-            <div class="card h-100 d-flex justify-content-between" style="width: 18rem; ">
-              <img class="card-img-top" src="https://idiomasblendex.com/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2018/11/Cero-las-tres-cruces-ingles-en-medellin-768x433.jpg.webp" alt="Card image cap">
+            <div class="card h-100 d-flex justify-content-between" style="width: 18rem ">
+              <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Vista_de_la_Iglesia_del_Perpetuo_Socorro_al_centro_-_Medell%C3%ADn.JPG/275px-Vista_de_la_Iglesia_del_Perpetuo_Socorro_al_centro_-_Medell%C3%ADn.JPG" alt="Card image cap">
                 <div class="card-body">
                 <h5 class="card-title">Cerro de las Tres Cruces</h5>
                 <p class="card-text">Echa un vistazo a esta ruta de ida y vuelta de 2,3-km cerca de Medellín, Antioquia. Por lo general, se considera una ruta moderada, que se tarda una media de 1 h 34 min en recorrer. Es una región muy popular para el senderismo, MTB y correr, por lo que es probable encontrarse con otras personas mientras se está por la zona.</p>
