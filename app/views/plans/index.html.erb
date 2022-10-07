@@ -18,8 +18,10 @@
       <div class="row">
       <% @plans.each do |plan| %>
         <div class="col-lg-4">
-          <div class="card h-100 d-flex justify-content-between" style="width: 21rem ">
-                <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Vista_de_la_Iglesia_del_Perpetuo_Socorro_al_centro_-_Medell%C3%ADn.JPG/275px-Vista_de_la_Iglesia_del_Perpetuo_Socorro_al_centro_-_Medell%C3%ADn.JPG" alt="Card image cap">
+          <% if plan.photo.attached?%>
+            <div class="card h-100 d-flex justify-content-between" style="width: 21rem ">
+          <% end %>
+                <%= cl_image_tag plan.photo.key, height: 300, width: 400, crop: :fill, class: "card-img-top" %>
                   <div class="card-body">
                   <h5 class="card-title"><%= plan.name %></h5>
                   <p class="card-text"> <%= plan.description %></p>
