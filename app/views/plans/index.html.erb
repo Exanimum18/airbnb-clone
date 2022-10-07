@@ -18,6 +18,7 @@
           <% if plan.photo.attached?%>
             <%= cl_image_tag plan.photo.key, height: 300, width: 400, crop: :fill, class: "card-img-top" %>
           <% end %>
+
                   <div class="card-body">
                   <h5 class="card-title"><%= plan.name %></h5>
 
