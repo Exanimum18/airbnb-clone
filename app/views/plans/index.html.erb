@@ -14,13 +14,13 @@
       <div class="row">
       <% @plans.each do |plan| %>
         <div class="col-lg-4">
-          <% if plan.photo.attached?%>
             <div class="card h-100 d-flex justify-content-between" style="width: 21rem ">
+          <% if plan.photo.attached?%>
+            <%= cl_image_tag plan.photo.key, height: 300, width: 400, crop: :fill, class: "card-img-top" %>
           <% end %>
-                <%= cl_image_tag plan.photo.key, height: 300, width: 400, crop: :fill, class: "card-img-top" %>
                   <div class="card-body">
                   <h5 class="card-title"><%= plan.name %></h5>
-                  <p class="card-text"> <%= plan.description %></p>
+
                   <center>
                   <div class= "btn btn-primary mx-auto text-center text-decoration-none">
                     <%= link_to "Armemos parche", plan_path(plan), class:"text-decoration-none"%>
