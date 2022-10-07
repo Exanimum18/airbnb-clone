@@ -1,42 +1,39 @@
-<div class="container py-5">
-  <div class="row">
-    <div class="col-12 col-md-6 offset-lg-3">
-      <div class="bg-white rounded p-3 shadow">
-        <h3>Comfirm a plan</h3>
-          <div class="row  justify-content-center">
-            <div class="col-12 col-lg-6">
-              <div class="d-block text-primary display-4">
-                <%= @plan.name %>
-              </div>
-              <br>
-              <div class="d-block fs-3">
-                <strong> <%= "Description:" %> </strong> <%= @plan.description %>
-              </div>
-              <div class="d-block fs-3">
-                <strong> <%= "Location:" %> </strong> <%= @plan.location %>
-              </div>
-              <div class="d-block fs-3">
-                <strong> <%= "Category:" %> </strong> <%= @plan.category %>
-              </div>
-              <div class="d-block fs-3">
-                <strong> <%= "Intensity:" %> </strong> <%= @plan.intensity %>
-              </div>
-              <div class="d-block fs-3">
-                <strong> <%= "Starts:" %> </strong> <%= @plan.starting_time %>
-              </div>
-              <div class="d-block fs-3">
-                <strong> <%= "Ends:" %> </strong> <%= @plan.finish_time %>
-              </div>
-              <%= simple_form_for [@plan, @booking] do |f| %>
-                <%= f.input :status,
-                  required: true,
-                  autofocus: true,
-                  input_html: { autocomplete: "Comfirm" }%>
-                <%= f.submit class: 'btn btn-primary'%>
-              <% end %>
-            </div>
-          </div>
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="card" style="width: 35rem;">
+      <div class="card-body">
+        <div class="d-block text-primary display-4">
+          <%= @plan.name %>
+        </div>
+        <br>
+        <div class="d-block fs-3">
+          <strong> <%= "Description:" %> </strong> <%= @plan.description %>
+        </div>
+        <div class="d-block fs-3">
+          <strong> <%= "Location:" %> </strong> <%= @plan.location %>
+        </div>
+        <div class="d-block fs-3">
+          <strong> <%= "Category:" %> </strong> <%= @plan.category %>
+        </div>
+        <div class="d-block fs-3">
+          <strong> <%= "Intensity:" %> </strong> <%= @plan.intensity %>
+        </div>
+        <div class="d-block fs-3">
+          <strong> <%= "Starts:" %> </strong> <%= @plan.starting_time %>
+        </div>
+        <div class="d-block fs-3">
+          <strong> <%= "Ends:" %> </strong> <%= @plan.finish_time %>
+        </div>
+        <%= simple_form_for [@plan, @booking] do |f| %>
+          <%= f.input :status,
+            required: true,
+            autofocus: true,
+            input_html: { autocomplete: "Comfirm" }%>
+          <%= f.submit class: 'btn btn-primary'%>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>
+  <div class="container" style="height:236px"></div>
 </div>
