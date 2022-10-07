@@ -5,3 +5,5 @@
     <p><%= booking.status ? 'activo' : 'cancelado'%></p>
     <%= link_to "Delete Booking", booking_path(booking), data: { turbo_confirm: "Are you sure?", turbo_method: :delete }, class: "btn btn-primary m-1" %>
 <% end %>
+
+<div class="container" style="height:79px"></div>
