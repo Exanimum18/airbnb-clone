@@ -3,5 +3,5 @@
     <p><%= booking.plan.description %></p>
     <p><%= booking.plan.location %></p>
     <p><%= booking.status ? 'activo' : 'cancelado'%></p>
-    <%= button_to "Delete Booking", plan_bookings_path(booking), data: { confirm: "Are you sure?" }, method: :delete, class: "btn btn-primary m-1" %>
+    <%= link_to "Delete Booking", booking_path(booking), data: { turbo_confirm: "Are you sure?", turbo_method: :delete }, class: "btn btn-primary m-1" %>
 <% end %>
