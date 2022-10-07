@@ -1,37 +1,4 @@
 
-
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="../../assets/stylesheets/components/_home.scss">
-</head>
-<body>
-  <div class="container py-5">
-    <div class="d-flex align-items-center justify-content-between mb-3 cover">
-      <h3 class="mb-0 ">Plans list</h3>
-      <%= link_to "Create a plan", new_plan_path, class: "btn btn-primary" %>
-    </div>
-    <div class="row">
-      <% @plans.each do |plan| %>
-        <div class="co-12 col-sm-6 col-md-4 mb-3 text-center">
-            <%= link_to plan_path(plan), class:"text-decoration-none" do %>
-            <%= plan.name %>
-          <div class= "img-plans">
-          </div>
-          <div class= "btn btn-primary">
-            <%= link_to "Booking"%>
-          </div>
-          <% end %>
-        <% end %>
-        </div>
-    </div>
-  </div>
-</body>
-</html>
-
     <div class=" mb-5 mt-5 ">
       <h1 class="text center"> Pa donde pegamos?
       </h1>
@@ -61,14 +28,9 @@
                     <%= link_to "Armemos parche", plan_path(plan), class:"text-decoration-none"%>
                   </div>
                   </center>
-
-
-
                   </div>
               </div>
         </div>
       <% end %>
       </div>
     </div>
-
-
