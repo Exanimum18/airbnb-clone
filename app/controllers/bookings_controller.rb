@@ -38,7 +38,7 @@ class BookingsController < ApplicationController
     @booking = Booking.find(params[:id])
     @plan = @booking.plan
     @booking.destroy
-    redirect_to plan_bookings_path(@plan)
+    redirect_to plan_bookings_path(@plan), status: :see_other
   end
 
   private
