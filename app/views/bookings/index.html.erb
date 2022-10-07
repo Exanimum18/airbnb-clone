@@ -1,9 +1,20 @@
-<% Booking.where(user: current_user).each do |booking| %>
-    <p><%= booking.plan.name %></p>
-    <p><%= booking.plan.description %></p>
-    <p><%= booking.plan.location %></p>
-    <p><%= booking.status ? 'activo' : 'cancelado'%></p>
-    <%= link_to "Delete Booking", booking_path(booking), data: { turbo_confirm: "Are you sure?", turbo_method: :delete }, class: "btn btn-primary m-1" %>
-<% end %>
+<div class="container mt-5 ">
+  <div class="row">
+    <div class="col-lg-3">
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <% Booking.where(user: current_user).each do |booking| %>
+                <h5 class="card-title"><%= booking.plan.name %></h5>
+                <p class="card-text"> <%= booking.plan.description %></p>
+                <p class="card-text"> <%= booking.plan.location %></p>
+                <p><%= booking.status ? 'activo' : 'cancelado'%></p>
+                <%= link_to "Delete Booking", booking_path(booking), data: { turbo_confirm: "Are you sure?", turbo_method: :delete }, class: "btn btn-primary m-1" %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <div class="container" style="height:79px"></div>
