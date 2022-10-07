@@ -8,26 +8,6 @@
   <link rel="stylesheet" href="../../assets/stylesheets/components/_home.scss">
 </head>
 <body>
-  <div class="container">
-    <video autoplay loop muted>
-      <source src="../../assets/videos/backvideo.mp4" type="video/mp4">
-    </video>
-    <div class="text-box">
-      <h1>NO SÉ QUE VENDEMOS</h1>
-    </div>
-
-<div class="container py-5">
-  <div class="d-flex align-items-center justify-content-between mb-3 cover">
-    <h3 class="mb-0 ">Plans list</h3>
-    <% if current_user.present? %>
-      <% if current_user.guide == true %>
-        <%= link_to "Create a plan", new_plan_path, class: "btn btn-primary" %>
-      <% end %>
-    <% end %>
-
-  </div>
-
-
   <div class="container py-5">
     <div class="d-flex align-items-center justify-content-between mb-3 cover">
       <h3 class="mb-0 ">Plans list</h3>
@@ -47,5 +27,7 @@
         <% end %>
         </div>
     </div>
+  </div>
+
 </body>
 </html>
