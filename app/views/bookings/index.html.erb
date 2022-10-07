@@ -1,6 +1,7 @@
-<% @bookings.each do |booking| %>
+<% Booking.where(user: current_user).each do |booking| %>
     <p><%= booking.plan.name %></p>
     <p><%= booking.plan.description %></p>
     <p><%= booking.plan.location %></p>
     <p><%= booking.status ? 'activo' : 'cancelado'%></p>
+    <%= link_to "Delete Booking", booking_path(booking), data: { turbo_confirm: "Are you sure?", turbo_method: :delete }, class: "btn btn-primary m-1" %>
 <% end %>
