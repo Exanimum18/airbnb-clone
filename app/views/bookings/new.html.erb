@@ -1,39 +1,44 @@
-<div class="container mt-5">
-  <div class="row justify-content-center">
-    <div class="card" style="width: 35rem;">
-      <div class="card-body">
-        <div class="d-block text-primary display-4">
-          <%= @plan.name %>
-        </div>
-        <br>
-        <div class="d-block fs-3">
-          <strong> <%= "Description:" %> </strong> <%= @plan.description %>
-        </div>
-        <div class="d-block fs-3">
-          <strong> <%= "Location:" %> </strong> <%= @plan.location %>
-        </div>
-        <div class="d-block fs-3">
-          <strong> <%= "Category:" %> </strong> <%= @plan.category %>
-        </div>
-        <div class="d-block fs-3">
-          <strong> <%= "Intensity:" %> </strong> <%= @plan.intensity %>
-        </div>
-        <div class="d-block fs-3">
-          <strong> <%= "Starts:" %> </strong> <%= @plan.starting_time %>
-        </div>
-        <div class="d-block fs-3">
-          <strong> <%= "Ends:" %> </strong> <%= @plan.finish_time %>
-        </div>
-        <%= simple_form_for [@plan, @booking] do |f| %>
-          <%= f.input :status,
-            required: true,
-            autofocus: true,
-            input_html: { autocomplete: "Comfirm" }%>
-          <%= f.submit class: 'btn btn-primary'%>
-          <% end %>
+<div class="background-video">
+    <video id="background-video" autoplay loop muted poster="https://assets.codepen.io/6093409/river.jpg">
+      <source src="https://assets.codepen.io/6093409/river.mp4" type="video/mp4">
+    </video>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="card card-top" style="width: 35rem;">
+        <div class="card-body">
+          <div class="d-block text-primary display-4">
+            <%= @plan.name %>
+          </div>
+          <br>
+          <div class="d-block fs-3">
+            <strong> <%= "Description:" %> </strong> <%= @plan.description %>
+          </div>
+          <div class="d-block fs-3">
+            <strong> <%= "Location:" %> </strong> <%= @plan.location %>
+          </div>
+          <div class="d-block fs-3">
+            <strong> <%= "Category:" %> </strong> <%= @plan.category %>
+          </div>
+          <div class="d-block fs-3">
+            <strong> <%= "Intensity:" %> </strong> <%= @plan.intensity %>
+          </div>
+          <div class="d-block fs-3">
+            <strong> <%= "Starts:" %> </strong> <%= @plan.starting_time %>
+          </div>
+          <div class="d-block fs-3">
+            <strong> <%= "Ends:" %> </strong> <%= @plan.finish_time %>
+          </div>
+          <%= simple_form_for [@plan, @booking] do |f| %>
+            <%= f.input :status,
+              required: true,
+              autofocus: true,
+              input_html: { autocomplete: "Comfirm" }%>
+            <%= f.submit class: 'btn btn-primary'%>
+            <% end %>
+          </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="container" style="height:236px"></div>
 </div>
+<div class="container" style="height:236px"></div>
